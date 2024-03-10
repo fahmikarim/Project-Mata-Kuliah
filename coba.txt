@@ -1,0 +1,2 @@
+2         Pertamax                              15     16000
+4         Permium_maksimal                     123    156000
