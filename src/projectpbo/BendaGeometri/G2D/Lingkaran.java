@@ -15,15 +15,24 @@ public class Lingkaran extends Benda2D{
     
     protected double jariJari;
     protected double luasLingkaran;
+    protected double kelilingLingkaran;
 
     public Lingkaran(double jariJari) {
         this.jariJari = jariJari;
     }
-
+    
+    @Override
+    public double hitungKeliling() {
+        kelilingLingkaran = Math.PI * (jariJari + jariJari);
+        return kelilingLingkaran;
+    }
+    
     @Override
     public double hitungLuas() {
         luasLingkaran = Math.PI * jariJari * jariJari;
         return luasLingkaran;
     }
+
+    
     
 }

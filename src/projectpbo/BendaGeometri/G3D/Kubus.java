@@ -11,18 +11,23 @@ import projectpbo.BendaGeometri.G2D.Persegi;
  *
  * @author ACER
  */
-public class BalokPersegi extends Persegi {
-    protected double tinggiBalok;
-    protected double volumeBalokPersegi;
+public class Kubus extends Persegi {
+    protected double luasPermukaanKubus;
+    protected double volumeKubus;
 
-    public BalokPersegi(double sisi, double tinggiBalok) {
+    public Kubus(double sisi) {
         super(sisi);
-        this.tinggiBalok = tinggiBalok;
+    }
+    
+    @Override
+    public double hitungLuasPermukaan(){
+        luasPermukaanKubus = 6.0 * super.hitungLuas();
+        return luasPermukaanKubus;
     }
     
     @Override
     public double hitungVolume(){
-        volumeBalokPersegi = tinggiBalok * super.hitungLuas();
-        return volumeBalokPersegi;
+        volumeKubus = super.sisi * super.luasPersegi;
+        return volumeKubus;
     }
 }

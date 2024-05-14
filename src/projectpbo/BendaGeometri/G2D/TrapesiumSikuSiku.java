@@ -11,23 +11,34 @@ import projectpbo.BendaGeometri.Benda2D;
  *
  * @author ACER
  */
-public class Trapesium extends Benda2D{
-    
+public class TrapesiumSikuSiku extends Benda2D{
+    //trapesium siku siku
     protected double sisiAtas;
     protected double sisiBawah;
     protected double tinggi;
+    protected double sisiMiring;
     protected double luasTrapesium;
+    protected double kelilingTrapesium;
 
-    public Trapesium(double sisiAtas, double sisiBawah, double tinggi) {
+    public TrapesiumSikuSiku(double sisiAtas, double sisiBawah, double tinggi) {
         this.sisiAtas = sisiAtas;
         this.sisiBawah = sisiBawah;
         this.tinggi = tinggi;
+        this.sisiMiring = hitungPythagoras(sisiBawah - sisiAtas, tinggi);
     }
-
+    
+    @Override
+    public double hitungKeliling() {
+        kelilingTrapesium = sisiAtas + sisiBawah + tinggi + sisiMiring;
+        return kelilingTrapesium;
+    }
+    
     @Override
     public double hitungLuas() {
         luasTrapesium = (sisiAtas + sisiBawah) * tinggi * 0.5;
         return luasTrapesium;
     }
+
+    
     
 }

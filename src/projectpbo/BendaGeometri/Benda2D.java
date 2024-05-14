@@ -17,4 +17,16 @@ public abstract class Benda2D implements BendaGeometri {
         double volumeGeometri2D = 0;
         return volumeGeometri2D;
     }
+    @Override
+    public abstract double hitungKeliling();
+    @Override
+    public double hitungLuasPermukaan(){
+        double luasPermukaanGeometri2D = 0;
+        return luasPermukaanGeometri2D;
+    }
+    @Override
+    public double hitungPythagoras(double a, double b){
+        double c = Math.sqrt(a*a + b*b);
+        return c;
+    }
 }

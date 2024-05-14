@@ -16,10 +16,17 @@ public class JajarGenjang extends Benda2D {
     protected double alas;
     protected double tinggi;
     protected double luasJajarGenjang;
+    protected double kelilingJajarGenjang;
 
     public JajarGenjang(double alas, double tinggi) {
         this.alas = alas;
         this.tinggi = tinggi;
+    }
+    
+     @Override
+    public double hitungKeliling() {
+        kelilingJajarGenjang = 2.0 * (alas + tinggi);
+        return kelilingJajarGenjang;
     }
     
     @Override
@@ -27,5 +34,6 @@ public class JajarGenjang extends Benda2D {
         luasJajarGenjang = alas * tinggi;
         return luasJajarGenjang;
     }
+
     
 }

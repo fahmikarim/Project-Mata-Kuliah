@@ -11,13 +11,21 @@ import projectpbo.BendaGeometri.Benda2D;
  *
  * @author ACER
  */
-public class Persegi extends Benda2D {
+public class Persegi extends Benda2D implements Runnable {
     
+    Thread threadPersegi;
     protected double sisi;
     protected double luasPersegi;
+    protected double kelilingPersegi;
 
     public Persegi(double sisi) {
         this.sisi = sisi;
+    }
+    
+    @Override
+    public double hitungKeliling(){
+        kelilingPersegi = 4 * sisi;
+        return kelilingPersegi;
     }
     
     @Override
@@ -25,5 +33,10 @@ public class Persegi extends Benda2D {
         luasPersegi = sisi * sisi;
         return luasPersegi;
     }
-    
+
+    @Override
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+       
 }

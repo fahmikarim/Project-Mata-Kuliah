@@ -13,6 +13,7 @@ import projectpbo.BendaGeometri.G2D.PersegiPanjang;
  */
 public class BalokPersegiPanjang extends PersegiPanjang{
     protected double tinggiBalok;
+    protected double luasPermukaanBalokPersegiPanjang;
     protected double volumeBalokPersegiPanjang;
 
     public BalokPersegiPanjang(double panjang, double lebar, double tinggiBalok) {
@@ -21,8 +22,14 @@ public class BalokPersegiPanjang extends PersegiPanjang{
     }
     
     @Override
+    public double hitungLuasPermukaan(){
+        luasPermukaanBalokPersegiPanjang = 2.0 * (super.hitungLuas() + tinggiBalok * (super.lebar + super.panjang));
+        return luasPermukaanBalokPersegiPanjang;
+    }
+    
+    @Override
     public double hitungVolume(){
-        volumeBalokPersegiPanjang = tinggiBalok * super.hitungLuas();
+        volumeBalokPersegiPanjang = tinggiBalok * super.luasPersegiPanjang;
         return volumeBalokPersegiPanjang;
     }
 }

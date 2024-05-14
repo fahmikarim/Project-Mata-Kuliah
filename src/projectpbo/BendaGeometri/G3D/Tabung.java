@@ -13,6 +13,7 @@ import projectpbo.BendaGeometri.G2D.Lingkaran;
  */
 public class Tabung extends Lingkaran {
     protected double tinggiTabung;
+    protected double luasPermukaanTabung;
     protected double volumeTabung;
 
     public Tabung(double jariJari, double tinggiTabung) {
@@ -21,8 +22,14 @@ public class Tabung extends Lingkaran {
     }
     
     @Override
+    public double hitungLuasPermukaan(){
+        luasPermukaanTabung = 2 * super.hitungLuas() + super.hitungKeliling() * tinggiTabung;
+        return luasPermukaanTabung;
+    }
+    
+    @Override
     public double hitungVolume(){
-        volumeTabung = tinggiTabung * super.hitungLuas();
+        volumeTabung = tinggiTabung * super.luasLingkaran;
         return volumeTabung;
     }
 }
