@@ -1,5 +1,0 @@
-1         pertromas_dan                         12    120000
-2         Pertamax                              15     16000
-3         Pertamaz_turbo                        14    123400
-4         Permium_maksimal                     123    156000
-5         Permium_maksimal                     123    156000
